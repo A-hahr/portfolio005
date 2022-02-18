@@ -1,0 +1,729 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'YUniverse-B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_yuniverse@1.0/YUniverse-B.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 초기값 */
+* {margin: 0; padding: 0;}
+li {list-style: none;}
+a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+html, body {
+    color: #333;
+}
+
+/* header */
+header {
+    height: 80px;
+    line-height: 80px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+header div {
+    max-width: 1600px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+header div h1 {
+    font-size: 30px;
+    margin-top: 40px;
+}
+header div a {
+    font-family: 'YUniverse-B';
+    color: #fff;
+}
+header div p a {
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+/* 메인비주얼 영상 */
+.main_visual {
+    background-color: rgb(93, 93, 93);
+    padding: 070px 0;
+}
+.main_visual div {
+    width: 510px;
+    height: 660px;
+    overflow: hidden; /* 해당 태그영역을 벗어나는 자식들을 숨김처리한다. */
+    border-radius: 250px 250px 0 0;
+    margin: 0 auto;
+}
+.main_visual div video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual p {
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 22px;
+    letter-spacing: 2px; /* 글자 좌우 간격 */
+}
+
+/* profile */
+/*********** 개인정보 */
+.profile {
+    max-width: 1024px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 150px;
+}
+.profile .photo {
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 55px;
+    overflow: visible;
+}
+.profile .photo figure {
+    width: 380px;
+    height: 740px;
+    margin: 0 auto;
+    border-radius: 40px;
+    /* border: 1px solid #555; */
+    overflow: visible; /* hidden */
+}
+.profile .photo figure img {
+    overflow: visible;
+    display: block;
+}
+.profile .about {
+    width: 58%;
+    background-color: rgb(200, 200, 200);
+    height: 100%;
+    border-radius: 40px;
+    padding: 50px;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 13px 0 rgb(56, 56, 56);
+}
+.profile .about dl {
+    /* text-shadow: 3px 3px 3px 0 #555; */
+    text-align: center;
+    font-size: 18px;
+}
+.profile .about dl dt {
+    font-family: 'YUniverse-B';
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 19px;
+    /* margin-bottom: 2px; */
+}
+.profile .about dl dd {
+    font-family: 'S-CoreDream-3Light';
+    /* margin-bottom: 12px; */
+}
+
+
+
+/* 모션그래픽디자인 */
+.motion {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+}
+.motion h3 {
+    font-family: 'YUniverse-B';
+    font-size: 75px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.motion .motion_in {
+    margin-bottom: 150px;
+}
+.motion .motion_in > ul { /* > 이렇게 해주면 '직계자식'이라는 의미를 가진다. 따라, .motion_in의 직계자식 중 ul을 선택한 것. */
+    font-family: 'S-CoreDream-3Light';
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    margin-top: 20px; /* 선 위로 여백을 준다. */
+    padding-top: 10px; /* 선 밑으로 여백을 준다. */
+}
+.motion_in .info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    align-items: flex-end;
+}
+.motion_in .info video {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.motion_in .info .text {
+    width: 35%;
+    height: 100%;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    word-break: break-all; /* 영문 줄바꿈을 해준다. */
+    object-fit: cover; 
+} 
+.motion_in .info .text .second {
+    text-align: left;
+} 
+.motion_in .info .text .second  {
+    margin-right: 30px;
+} 
+.motion_in .info .text h4 {
+    font-family: 'YUniverse-B';
+    font-size: 38px;
+    font-weight: bolder;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+.motion_in .info .text strong {
+    font-family: 'S-CoreDream-3Light';
+}
+.motion_in .info .text dl {
+    font-family: 'S-CoreDream-3Light';
+    display: flex;
+}
+.motion_in .info .text dl dt {
+    width: 18%;
+}
+.motion_in .info .text dl dd {
+    width: 82%;
+}
+.motion_in .info .text p {
+    font-family: 'S-CoreDream-3Light';
+    margin-bottom: 20px;
+}
+
+
+/* 스틸컷 */
+.motion .thum {
+    margin-top: 30px;
+}
+.motion .thum ul {
+    display: flex;
+    justify-content: space-between;
+}
+.motion .thum ul li {
+    width: 19%;
+}
+.motion .thum ul li figure {
+    width: 100%;
+    height: 6vw;
+    /* 
+    100vh = 브라우저 전체 높이
+    100vw = 브라우저 전체 폭
+    */
+}
+.motion .thum ul li p {
+    /* font-family: 'S-CoreDream-3Light'; */
+    margin-top: 5px;
+}
+.motion .thum ul li figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #333;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+/* 공통된 스타일 */
+h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+h4 {
+    font-size: 30px;
+}
+.btn {
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+}
+.btn li {
+    width: 0;
+    transition: 0.8s;
+    /* 효과가 들어가는 속도조절, 딜레이, 시간조절 등을 할 수 있는 태그이다. */
+}
+.btn li:nth-child(2) {
+    position: absolute;
+    left: 150px;
+}
+.btn li a {
+    width: 140px;
+    height: 48px;
+    line-height: 48px;
+    border: 1px solid #333;
+    margin-right: 10px;
+    text-align: center;
+    box-sizing: border-box; /* 나왔었쥬~ 전체 스타일 합해서 width 크기에 맞춰주는 것. 이렇게 하면 유튜브보기의 hover 시 backgroun 색 들어갈 때의 여백이 안 생긴다. */
+}
+.btn li:nth-child(1):hover {
+    background-color: rgb(77, 24, 24);
+    width: 140px;
+}
+.btn li:nth-child(2):hover {
+    background-color: rgb(185, 96, 96);
+    width: 140px;
+}
+.btn li:hover a {
+    color: rgb(255, 221, 210);
+}
+
+
+
+/* 모션슬라이드 스와이퍼 스타일 */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+   /*  display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; 주석처리함. */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 모션슬라이드 */
+.motion_slide {
+    margin: 150px 0;
+}
+.motion_slide .swiper-slide figure {
+    height: 560px;
+    background-color: rgb(255, 218, 133);
+}
+.motion_slide .swiper-slide .list {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: -400px;
+}
+.motion_slide .swiper-slide video {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 2px 3px 20px rgba(0, 0 , 0, .3);
+}
+.motion_slide .swiper-slide  .info {
+    width: 35%;
+    text-align: left;
+    word-break: break-all;
+    margin-top: 4%;
+    color: black;
+}
+.motion_slide .swiper-slide .info strong {
+    font-family: 'S-CoreDream-3Light';
+}
+.motion_slide .swiper-slide .info h4 {
+    font-family: 'YUniverse-B';
+    margin-top: 5px;
+}
+.motion_slide .swiper-slide .info dl {
+    display: flex;
+    margin-top: 5px;
+}
+.motion_slide .swiper-slide .info dl dt {
+    font-family: 'S-CoreDream-3Light';
+    width: 20%;
+    font-weight: bold;
+}
+.motion_slide .swiper-slide .info dl dd {
+    font-family: 'S-CoreDream-3Light';
+    width: 80%;
+}
+.motion_slide .swiper-slide .info p {
+    font-family: 'S-CoreDream-3Light';
+    margin: 10px 0 20px;
+}
+.motion_slide .swiper-slide figure.f1 {
+    background-color:steelblue;
+}
+.motion_slide .swiper-slide figure.f2 {
+    background-color:rgb(255, 196, 0);
+}
+.motion_slide .swiper-slide figure.f3 {
+    background-color:rgb(99, 97, 211);
+}
+
+
+
+/* 유튜브 리스트 */
+.youtube_list h3 {
+    font-family: 'YUniverse-B';
+    font-size: 55px;
+    text-align: center;
+}
+.youtube_list .motion_cate ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.youtube_list .motion_cate ul li {
+    font-family: 'S-CoreDream-3Light';
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.youtube_list .motion_cate ul li.on {
+    background-color: #333;
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, .3);
+    border: 1px solid #333;
+}
+.youtube_list .motion_cate ul li.on a {
+    color: #fff;
+}
+.mySwiperyoutube .swiper-wrapper {display: none;}
+.mySwiperyoutube .swiper-wrapper.on {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 유튜브리스트 컨텐츠 스타일 */
+.youtube_list .youtube_wrap .youtube_cont {
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+.youtube_list .youtube_wrap .swiper-slide {
+    width: 49%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 0.5%;
+    margin-bottom: 20px;
+}
+.youtube_list .swiper-slide .youtube {
+    position: relative;
+    padding-bottom: 56.25%;
+    width: 100%;
+}
+.youtube_list .swiper-slide .youtube iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.youtube_list .swiper-slide .info {
+    padding: 25px;
+    text-align: left;
+}
+.youtube_list .swiper-slide .info p {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 15px;
+}
+.youtube_list .swiper-slide .info h4 {
+    font-family: 'YUniverse-B';
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.youtube_list .swiper-slide .info dl {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 17px;
+    display: flex;
+    margin-top: 4px;
+}
+.youtube_list .swiper-slide .info dl dt {
+    width: 20%;
+    font-weight: bold;
+}
+.youtube_list .swiper-slide .info dl dd {
+    width: 80%;
+    word-break: break-all;
+}
+
+/* 2D 디자인 */
+.g_design {
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    margin: 150px auto;
+}
+.g_design h3 {
+    font-size: 55px;
+    font-family: 'YUniverse-B';
+    text-align: center;
+    margin-bottom: 20px;
+}
+.g_design em {
+    text-align: right;
+    display: block;
+    font-size: 13px;
+}
+.g_design .img_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.g_design .img_list div {
+    width: 24%;
+    height: 100%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+.g_design .img_list div:nth-child(1) {
+    width: 24%;
+    height: 70%;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+.g_design .img_list div img {
+    width: 100%;
+}
+.g_design .img_list ul {
+    padding: 20px;
+}
+.g_design .img_list ul li:nth-child(1) {
+    font-family: 'S-CoreDream-3Light';
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+.g_design .img_list ul li:nth-child(2) {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'YUniverse-B';
+}
+
+/* Footer 스타일 */
+footer {
+    background-color: rgb(95, 95, 95);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+footer a {
+    color: #fff;
+}
+footer h3 {
+    font-family: 'YUniverse-B';
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+footer ul {
+    margin: 20px 0;
+}
+footer ul li {
+    font-family: 'YUniverse-B';
+    font-size: 21px;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin: 10px auto;
+}
+footer ul li:nth-child(3) {
+    width: 410px;
+    height: 50px;
+    font-weight: bold;
+    line-height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin: 10px auto;
+}
+footer p {
+    font-family: 'S-CoreDream-3Light';
+    margin-top: 100px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+
+/* 반응형 제작 ************************************
+**************************************************/
+
+@media screen and (max-width: 1024px) {
+    
+    /* 모션그래픽디자인 슬라이드 */
+    .motion_slide .swiper-slide figure {
+        height: 35vw;
+    }
+    .motion_slide .swiper-slide .list {
+        margin-top: -24%;
+    }
+    .motion_slide .swiper-slide .list .info {
+        margin-top: 1%;
+    }
+
+    /* 버튼들 */
+    .btn {margin-top: 30px;}
+}
+
+
+@media screen and (max-width: 960px) {
+    /* 모션그래픽디자인 상단 */
+    .motion .info {flex-wrap: wrap;}
+    .motion .info video {
+        width: 100%;
+    }
+    .motion .info .text {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .motion .flex_bottom ul li {width: 24%;}
+    .motion .flex_bottom ul li:last-child {display: none;}
+    .motion .flex_bottom ul li figure {height: 180px;}
+
+    .motion .motion_in:nth-of-type(2) .info video { order: -1;}
+
+    /* 모션그래픽디자인 슬라이드 */
+    .motion_slide .swiper-slide .list video {
+        width: 100%;
+    }
+    .motion_slide .swiper-slide .list .info {
+        width: 95%;
+        margin: 20px auto;
+    }
+    .motion_slide .swiper-slide .list {
+        width: 90%; 
+    }
+    .motion_slide {margin: 70px auto;}
+
+
+    /* 유튜브 리스트 */
+    .youtube_list {margin: 0 auto;}
+
+    /* 그래픽디자인 */
+    .g_design {margin-top: 70px;} 
+}
+
+
+@media screen and (max-width: 640px) {
+    :root  {--swiper-navigation-size: 24px;}
+
+    h3 {font-size: 30px;}
+    h4 {font-size: 24px;}
+    .tit {display: none;}
+
+    /* 메인비주얼 */
+    .main_visual div {
+        width: 70%;
+        height: 60vh;
+    }
+
+    /* 자기소개서 */
+    .profile {flex-wrap: wrap;}
+    .profile .photo {width: 100%;}
+    .profile figure {margin: 0 auto; width: 300px; height: 300px; border-radius: 50%; margin-bottom: 30px;}
+    .profile figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+    }
+    .profile .about {width: 100%;}
+
+    /* 모션그래픽디자인 */
+    .motion {margin: 80px auto;} 
+    .motion .motion_in {margin-bottom: 80px;}
+    .motion .motion_in > ul {flex-wrap: wrap;}
+
+    .motion .info .info h4 {margin-bottom: 10px;}
+    .motion .info .info p {margin-bottom: 30px;}
+
+    .motion .thum {display: none;}
+    .motion .thum ul li:nth-child(4) {display: none;}
+    .motion .thum ul li {width: 32%;}
+    .motion .thum ul li figure {height: 120px;}
+    
+    /* 모션그래픽디자인 슬라이드 */
+    .motion_slide {margin: 70px auto;}
+    .motion_slide .swiper-slide .info h4 {font-size: 24px; margin-bottom: 10px;}
+ 
+
+    /* 유튜브리스트 */ 
+    .youtube_list {padding:0;}
+    .youtube_list .swiper-slide .info {padding: 15px;}
+    .youtube_list .swiper-slide .info dl {font-size: 16px;}
+    /* 리스트 슬라이드 */
+    .mySwiperyoutube .swiper-wrapper.on {
+        flex-wrap: nowrap;
+    }
+    .mySwiperyoutube .swiper-wrapper.on .swiper-slide {
+        width: 420px;
+    } 
+    .mySwiperyoutube .swiper-wrapper > div {margin: 0; }
+    
+
+    /* 그래픽디자인 */
+    .g_design {margin: 70px auto;}
+    .g_design .img_list {flex-wrap: wrap;}
+    .g_design .img_list div {width: 49%; margin: 10px 0;}
+
+    /* .g_design .img_list div a:nth-child(2) {
+        width: 1800px;
+        height: 350px;
+    } */
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    
+    .motion .info .text dl dt {width: 30%;}
+    .motion .info .text dl dd {width: 65%;}
+    .motion .thum {margin-top: 10px;}
+
+ 
+    .motion_slide .list .info dl dt {width: 30%;}
+    .motion_slide .list .info dl dd {width: 65%;}
+
+
+    /* 유튜브리스트 */
+    .youtube_list h3 {font-size: 25px;}
+    
+    .youtube_list .swiper-slide .info dl {flex-wrap: wrap;}
+    .youtube_list .swiper-slide .info dl dt {width: 100%;}
+    .youtube_list .swiper-slide .info dl dd {width: 100%;}
+
+    /* 그래픽디자인 */ 
+    .img_list a ul {padding: 10px;}
+    .img_list a ul li:nth-child(2) {font-size: 17px;}
+    
+}
